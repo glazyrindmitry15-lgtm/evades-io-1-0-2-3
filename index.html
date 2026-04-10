@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Central Core — evades.io style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root">
+    <canvas id="game"></canvas>
+    <div id="auth-wrap">
+      <div id="auth-title">Аккаунт</div>
+      <div id="auth-user" class="auth-user">Гость</div>
+      <input id="auth-login" type="text" maxlength="24" placeholder="Логин" autocomplete="username" />
+      <input id="auth-pass" type="password" maxlength="48" placeholder="Пароль" autocomplete="current-password" />
+      <input id="auth-nick" type="text" maxlength="24" placeholder="Ник в игре" autocomplete="nickname" />
+      <div class="auth-actions">
+        <button id="auth-register" type="button">Регистрация</button>
+        <button id="auth-signin" type="button">Вход</button>
+        <button id="auth-logout" type="button">Выход</button>
+      </div>
+      <div id="auth-status" class="auth-status"></div>
+    </div>
+    <div id="leaderboard-wrap">
+      <h3>Лидерборд</h3>
+      <div id="leaderboard-list"></div>
+    </div>
+    <div id="chat-wrap">
+      <div id="chat-log" aria-live="polite"></div>
+      <input
+        id="chat-input"
+        type="text"
+        maxlength="200"
+        placeholder="Чат — Enter. T — фокус. Админ: /cmd admin пароль"
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+    <div class="chrome" aria-hidden="false">
+      <p id="status" class="status" aria-live="polite"></p>
+      <p id="hint" class="hint"></p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
